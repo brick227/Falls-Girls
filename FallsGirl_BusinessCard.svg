@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 760 480" width="760" height="480">
+  <defs>
+    <radialGradient id="bgGlowF" cx="30%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a0a18"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </radialGradient>
+    <radialGradient id="pinkGlowFront" cx="25%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#FF1A6C" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FF1A6C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frontCard">
+      <rect x="20" y="20" width="340" height="200" rx="10"/>
+    </clipPath>
+    <clipPath id="backCard">
+      <rect x="400" y="20" width="340" height="200" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- PAGE BACKGROUND -->
+  <rect width="760" height="480" fill="#111"/>
+
+  <!-- LABELS -->
+  <text x="190" y="14" font-family="Arial, sans-serif" font-size="10" fill="#444"
+    text-anchor="middle" letter-spacing="3">FRONT</text>
+  <text x="570" y="14" font-family="Arial, sans-serif" font-size="10" fill="#444"
+    text-anchor="middle" letter-spacing="3">BACK</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           FRONT CARD                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="24" y="24" width="340" height="200" rx="10" fill="rgba(255,26,108,0.12)"/>
+  <rect x="20" y="20" width="340" height="200" rx="10" fill="url(#bgGlowF)"/>
+  <rect x="20" y="20" width="340" height="200" rx="10" fill="url(#pinkGlowFront)"/>
+
+  <pattern id="gridF" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FF1A6C" stroke-width="0.2" stroke-opacity="0.07"/>
+  </pattern>
+  <rect x="20" y="20" width="340" height="200" rx="10" fill="url(#gridF)" clip-path="url(#frontCard)"/>
+
+  <!-- Left pink accent bar -->
+  <rect x="20" y="20" width="6" height="200" rx="3" fill="#FF1A6C"/>
+
+  <!-- Border lines -->
+  <line x1="38" y1="32" x2="348" y2="32" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.3"/>
+  <line x1="38" y1="208" x2="348" y2="208" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.3"/>
+
+  <!-- Ghost FG watermark -->
+  <text x="195" y="185" font-family="Arial Black, sans-serif" font-weight="900"
+    font-size="130" fill="#FF1A6C" opacity="0.05" text-anchor="middle" letter-spacing="-5">FG</text>
+
+  <!-- Sparkles -->
+  <g transform="translate(318, 48)" fill="#FF1A6C" opacity="0.6" filter="url(#softglow)">
+    <polygon points="0,-6 1.8,-1.8 6,0 1.8,1.8 0,6 -1.8,1.8 -6,0 -1.8,-1.8"/>
+  </g>
+  <g transform="translate(48, 190)" fill="#FF1A6C" opacity="0.35">
+    <polygon points="0,-4 1.2,-1.2 4,0 1.2,1.2 0,4 -1.2,1.2 -4,0 -1.2,-1.2"/>
+  </g>
+
+  <!-- FALLS GIRL -->
+  <text x="46" y="100" font-family="Arial Black, sans-serif" font-weight="900"
+    font-size="44" fill="#FF1A6C" filter="url(#glow)" letter-spacing="-1">FALLS</text>
+  <text x="46" y="143" font-family="Arial Black, sans-serif" font-weight="900"
+    font-size="44" fill="#FFFFFF" letter-spacing="-1">GIRL</text>
+  <text x="46" y="162" font-family="Arial, sans-serif" font-weight="300"
+    font-size="10" fill="#FF5C9A" letter-spacing="4">CLEANING CO.</text>
+
+  <!-- Vertical divider -->
+  <line x1="220" y1="44" x2="220" y2="196" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- Right side — Bebe's info -->
+  <text x="234" y="66" font-family="Arial Black, sans-serif" font-size="15"
+    fill="#FFFFFF" letter-spacing="0.5">Bebe PB</text>
+  <text x="234" y="82" font-family="Arial, sans-serif" font-size="9"
+    fill="#FF5C9A" letter-spacing="2.5">CLEANING SPECIALIST</text>
+
+  <line x1="234" y1="90" x2="348" y2="90" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.4"/>
+
+  <text x="234" y="110" font-family="Arial, sans-serif" font-size="10"
+    fill="#aaaaaa">📞  (605) 501-8464</text>
+  <text x="234" y="128" font-family="Arial, sans-serif" font-size="10"
+    fill="#aaaaaa">✉   thefallsgirl@yahoo.com</text>
+  <text x="234" y="146" font-family="Arial, sans-serif" font-size="10"
+    fill="#aaaaaa">📍  Sioux Falls, SD</text>
+  <text x="234" y="164" font-family="Arial, sans-serif" font-size="10"
+    fill="#FF5C9A">@FallsGirlCleaning</text>
+
+  <text x="190" y="192" font-family="Georgia, serif" font-style="italic" font-size="8.5"
+    fill="#444" text-anchor="middle">"We clean up after everyone else's good time."</text>
+  <text x="354" y="214" font-family="Arial, sans-serif" font-size="7"
+    fill="#2a2a2a" text-anchor="end" letter-spacing="1.5">A BPB LLC CO.</text>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--     BACK CARD — SERVICE FOCUSED        -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="404" y="24" width="340" height="200" rx="10" fill="rgba(255,26,108,0.12)"/>
+  <rect x="400" y="20" width="340" height="200" rx="10" fill="#0D0D0D"/>
+
+  <!-- Back grid texture -->
+  <pattern id="gridB" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FF1A6C" stroke-width="0.2" stroke-opacity="0.06"/>
+  </pattern>
+  <rect x="400" y="20" width="340" height="200" rx="10" fill="url(#gridB)" clip-path="url(#backCard)"/>
+
+  <!-- Back pink glow left -->
+  <radialGradient id="backGlow" cx="15%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FF1A6C" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#FF1A6C" stop-opacity="0"/>
+  </radialGradient>
+  <rect x="400" y="20" width="340" height="200" rx="10" fill="url(#backGlow)" clip-path="url(#backCard)"/>
+
+  <!-- Left full pink bar on back -->
+  <rect x="400" y="20" width="70" height="200" fill="#FF1A6C" clip-path="url(#backCard)"/>
+
+  <!-- Vertical text on pink bar -->
+  <text x="435" y="135" font-family="Arial Black, sans-serif" font-size="9"
+    fill="rgba(0,0,0,0.25)" text-anchor="middle" letter-spacing="4"
+    transform="rotate(-90, 435, 120)">FALLS GIRL CLEANING</text>
+
+  <!-- Sparkle on pink bar -->
+  <g transform="translate(435, 42)" fill="rgba(255,255,255,0.5)" filter="url(#softglow)">
+    <polygon points="0,-6 1.8,-1.8 6,0 1.8,1.8 0,6 -1.8,1.8 -6,0 -1.8,-1.8"/>
+  </g>
+  <g transform="translate(435, 198)" fill="rgba(255,255,255,0.4)">
+    <polygon points="0,-4 1.2,-1.2 4,0 1.2,1.2 0,4 -1.2,1.2 -4,0 -1.2,-1.2"/>
+  </g>
+
+  <!-- Top/bottom border lines -->
+  <line x1="482" y1="33" x2="728" y2="33" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.3"/>
+  <line x1="482" y1="207" x2="728" y2="207" stroke="#FF1A6C" stroke-width="0.75" stroke-opacity="0.3"/>
+
+  <!-- SERVICE 1 — Airbnb -->
+  <!-- Number -->
+  <text x="492" y="75" font-family="Arial Black, sans-serif" font-size="28"
+    fill="#FF1A6C" opacity="0.15">01</text>
+  <!-- Icon circle -->
+  <circle cx="510" cy="66" r="12" fill="rgba(255,26,108,0.12)" stroke="#FF1A6C" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="510" y="71" font-family="Arial, sans-serif" font-size="11"
+    fill="#FF1A6C" text-anchor="middle">🏡</text>
+  <!-- Title -->
+  <text x="530" y="63" font-family="Arial Black, sans-serif" font-size="12"
+    fill="#FFFFFF" letter-spacing="0.3">Airbnb Specialist</text>
+  <text x="530" y="77" font-family="Arial, sans-serif" font-size="9"
+    fill="#888" letter-spacing="0.3">Fast, spotless guest-ready turnovers</text>
+
+  <!-- Divider -->
+  <line x1="486" y1="92" x2="728" y2="92" stroke="#FF1A6C" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- SERVICE 2 — Move In/Out -->
+  <text x="492" y="133" font-family="Arial Black, sans-serif" font-size="28"
+    fill="#FF1A6C" opacity="0.15">02</text>
+  <circle cx="510" cy="124" r="12" fill="rgba(255,26,108,0.12)" stroke="#FF1A6C" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="510" y="129" font-family="Arial, sans-serif" font-size="11"
+    fill="#FF1A6C" text-anchor="middle">📦</text>
+  <text x="530" y="121" font-family="Arial Black, sans-serif" font-size="12"
+    fill="#FFFFFF" letter-spacing="0.3">Move-In / Move-Out</text>
+  <text x="530" y="135" font-family="Arial, sans-serif" font-size="9"
+    fill="#888" letter-spacing="0.3">Leave it spotless — every time</text>
+
+  <!-- Divider -->
+  <line x1="486" y1="150" x2="728" y2="150" stroke="#FF1A6C" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- SERVICE 3 — Quick Turnaround -->
+  <text x="492" y="191" font-family="Arial Black, sans-serif" font-size="28"
+    fill="#FF1A6C" opacity="0.15">03</text>
+  <circle cx="510" cy="182" r="12" fill="rgba(255,26,108,0.12)" stroke="#FF1A6C" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="510" y="187" font-family="Arial, sans-serif" font-size="11"
+    fill="#FF1A6C" text-anchor="middle">⚡</text>
+  <text x="530" y="179" font-family="Arial Black, sans-serif" font-size="12"
+    fill="#FFFFFF" letter-spacing="0.3">Quick Turnaround</text>
+  <text x="530" y="193" font-family="Arial, sans-serif" font-size="9"
+    fill="#888" letter-spacing="0.3">Same-day service available</text>
+
+  <!-- QR code bottom right corner -->
+  <rect x="694" y="148" width="42" height="42" rx="3" fill="white"/>
+  <image x="696" y="150" width="38" height="38" href="data:image/png;base64,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"/>
+
+  <!-- Scan label under QR -->
+  <text x="715" y="200" font-family="Arial, sans-serif" font-size="7"
+    fill="#444" text-anchor="middle" letter-spacing="1">SCAN TO BOOK</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--    BOTTOM INFO PANELS                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="20" y="240" width="340" height="220" rx="8" fill="#161616" stroke="#222" stroke-width="1"/>
+  <text x="190" y="262" font-family="Arial, sans-serif" font-size="9" fill="#444"
+    text-anchor="middle" letter-spacing="3">FRONT — 3.5" × 2" STANDARD</text>
+  <line x1="40" y1="268" x2="340" y2="268" stroke="#222" stroke-width="1"/>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="44" y="292">Name: Bebe PB</text>
+    <text x="44" y="312">Phone: (605) 501-8464</text>
+    <text x="44" y="332">Email: thefallsgirl@yahoo.com</text>
+    <text x="44" y="352">Handle: @FallsGirlCleaning</text>
+    <text x="44" y="372">Location: Sioux Falls, SD</text>
+  </g>
+  <rect x="36" y="386" width="308" height="58" rx="4"
+    fill="rgba(255,26,108,0.06)" stroke="rgba(255,26,108,0.2)" stroke-width="1"/>
+  <text x="190" y="404" font-family="Arial, sans-serif" font-size="9" fill="#FF5C9A"
+    text-anchor="middle" letter-spacing="1">✦ PRINT NOTES</text>
+  <text x="190" y="420" font-family="Arial, sans-serif" font-size="10" fill="#555"
+    text-anchor="middle">Export as PNG · Matte black cardstock</text>
+  <text x="190" y="436" font-family="Arial, sans-serif" font-size="10" fill="#555"
+    text-anchor="middle">500 cards ~5–40 · Vistaprint or GotPrint</text>
+
+  <rect x="400" y="240" width="340" height="220" rx="8" fill="#161616" stroke="#222" stroke-width="1"/>
+  <text x="570" y="262" font-family="Arial, sans-serif" font-size="9" fill="#444"
+    text-anchor="middle" letter-spacing="3">BACK — 3.5" × 2" STANDARD</text>
+  <line x1="420" y1="268" x2="720" y2="268" stroke="#222" stroke-width="1"/>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="424" y="292">Hot pink left bar with rotating brand name</text>
+    <text x="424" y="312">3 services: Airbnb · Move-In/Out · Quick Turn</text>
+    <text x="424" y="332">Numbered layout with icon circles</text>
+    <text x="424" y="352">QR code bottom right — scans to booking link</text>
+    <text x="424" y="372">Dark background — matches front card feel</text>
+  </g>
+  <rect x="416" y="386" width="308" height="58" rx="4"
+    fill="rgba(255,26,108,0.06)" stroke="rgba(255,26,108,0.2)" stroke-width="1"/>
+  <text x="570" y="404" font-family="Arial, sans-serif" font-size="9" fill="#FF5C9A"
+    text-anchor="middle" letter-spacing="1">✦ WHERE TO PRINT</text>
+  <text x="570" y="420" font-family="Arial, sans-serif" font-size="10" fill="#555"
+    text-anchor="middle">Vistaprint · GotPrint · Canva Print · Staples</text>
+  <text x="570" y="436" font-family="Arial, sans-serif" font-size="10" fill="#555"
+    text-anchor="middle">Request matte finish — makes pink pop harder</text>
+
+</svg>

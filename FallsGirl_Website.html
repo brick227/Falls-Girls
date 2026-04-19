@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falls Girl Cleaning Co. — Sioux Falls, SD</title>
+<meta name="description" content="Sioux Falls' boldest cleaning crew. Airbnb turnovers, deep cleans, move-in/out, and office cleaning. We clean up after everyone else's good time." />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #FF1A6C;
+  --pink-light: #FF5C9A;
+  --pink-pale: #FFD6E7;
+  --black: #0D0D0D;
+  --off-black: #161616;
+  --card-bg: #1C1C1C;
+  --border: #2a2a2a;
+  --white: #FFFFFF;
+  --gray: #888;
+  --light-gray: #bbb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,13,13,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-brand span { color: var(--pink); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.nav-cta {
+  background: var(--pink);
+  color: var(--white) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 500 !important;
+  transition: opacity 0.2s !important;
+}
+
+.nav-cta:hover { opacity: 0.85; color: var(--white) !important; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 800px; height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,26,108,0.14) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,26,108,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,26,108,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1rem;
+  opacity: 0;
+  animation: sparkle-float 4s ease-in-out infinite;
+}
+.sparkle:nth-child(1){top:18%;left:8%;animation-delay:0s;}
+.sparkle:nth-child(2){top:22%;right:10%;animation-delay:1s;}
+.sparkle:nth-child(3){bottom:25%;left:6%;animation-delay:2s;}
+.sparkle:nth-child(4){bottom:28%;right:12%;animation-delay:3s;}
+.sparkle:nth-child(5){top:55%;left:15%;animation-delay:1.5s;}
+.sparkle:nth-child(6){top:38%;right:6%;animation-delay:0.5s;}
+
+@keyframes sparkle-float {
+  0%,100%{opacity:0;transform:translateY(0) scale(0.7);}
+  50%{opacity:1;transform:translateY(-14px) scale(1.3);}
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+  animation: fade-up 0.7s ease both;
+}
+
+.hero-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  animation: fade-up 0.7s 0.1s ease both;
+}
+
+.hero-logo .falls { color: var(--pink); display: block; }
+.hero-logo .girl  { color: var(--white); display: block; }
+
+.hero-cleaning-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 0.75rem;
+  animation: fade-up 0.7s 0.2s ease both;
+}
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--pink-light);
+  margin: 2rem 0 0.75rem;
+  animation: fade-up 0.7s 0.3s ease both;
+}
+
+.hero-location {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray);
+  animation: fade-up 0.7s 0.4s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  animation: fade-up 0.7s 0.5s ease both;
+}
+
+@keyframes fade-up {
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ─── BUTTONS ─── */
+.btn-primary {
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-ghost:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
+
+/* ─── SECTION BASE ─── */
+.section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.section-title em { color: var(--pink); font-style: normal; }
+
+.section-sub {
+  font-size: 15px;
+  color: var(--gray);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--pink), rgba(255,26,108,0.08), transparent);
+  margin: 2rem 0 3rem;
+}
+
+.full-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── INTRO STRIP ─── */
+.intro-strip {
+  background: var(--off-black);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.intro-stat-num {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2.2rem;
+  color: var(--pink);
+  line-height: 1;
+}
+
+.intro-stat-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 0.3rem;
+}
+
+/* ─── SERVICE CARDS ─── */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card:hover {
+  border-color: var(--pink);
+  transform: translateY(-4px);
+}
+
+.service-card-top {
+  background: linear-gradient(135deg, #1a0a10, #2d0f1f);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-top::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, var(--card-bg));
+}
+
+.service-card-body {
+  padding: 1.5rem;
+}
+
+.service-card-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-card-desc {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.service-card-price {
+  font-size: 12px;
+  color: var(--pink-light);
+  letter-spacing: 0.05em;
+}
+
+.service-card-arrow {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 500;
+}
+
+/* ─── PRICE TABLES ─── */
+.service-section {
+  background: var(--off-black);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+
+.service-section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-icon {
+  width: 56px; height: 56px;
+  background: rgba(255,26,108,0.12);
+  border: 1px solid rgba(255,26,108,0.25);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.includes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.include-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 13px;
+  color: var(--light-gray);
+  padding: 0.4rem 0;
+}
+
+.include-item::before {
+  content: '✓';
+  color: var(--pink);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.price-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.price-card:hover { border-color: rgba(255,26,108,0.4); }
+
+.price-size {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.4rem;
+}
+
+.price-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.price-sqft {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.price-amount {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.4rem;
+  color: var(--pink);
+  line-height: 1;
+}
+
+.price-note {
+  font-size: 11px;
+  color: #555;
+  margin-top: 0.35rem;
+}
+
+/* ─── WHY US ─── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.why-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.why-card:hover { border-color: rgba(255,26,108,0.35); }
+
+.why-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.why-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-desc {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.65;
+}
+
+/* ─── AIRBNB SPOTLIGHT ─── */
+.airbnb-spotlight {
+  background: linear-gradient(135deg, #1a0510 0%, #0d0d0d 100%);
+  border: 1px solid rgba(255,26,108,0.2);
+  border-radius: 12px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.airbnb-headline {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.airbnb-headline em { color: var(--pink); font-style: normal; }
+
+.airbnb-body {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.airbnb-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.airbnb-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+.airbnb-checklist li::before {
+  content: '✦';
+  color: var(--pink);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.airbnb-rates {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.airbnb-rate-header {
+  background: var(--pink);
+  padding: 1rem 1.5rem;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.airbnb-rate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.airbnb-rate-row:last-child { border-bottom: none; }
+
+.airbnb-rate-type { color: var(--light-gray); }
+.airbnb-rate-price {
+  font-family: 'Archivo Black', sans-serif;
+  color: var(--pink);
+}
+
+.airbnb-rate-note {
+  padding: 0.75rem 1.5rem;
+  font-size: 11px;
+  color: #555;
+  border-top: 1px solid var(--border);
+  font-style: italic;
+}
+
+/* ─── AREAS ─── */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.area-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 13px;
+  color: var(--light-gray);
+  text-align: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.area-pill:hover { border-color: var(--pink); color: var(--pink); }
+
+/* ─── TESTIMONIALS ─── */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.testi-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.testi-stars {
+  color: var(--pink);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.testi-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.testi-author {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.testi-author span { color: var(--pink); }
+
+/* ─── FAQ ─── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.faq-q:hover { background: rgba(255,26,108,0.05); }
+
+.faq-q.open { color: var(--pink); }
+
+.faq-toggle {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: var(--pink);
+  transition: transform 0.3s;
+  line-height: 1;
+}
+
+.faq-q.open .faq-toggle { transform: rotate(45deg); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+  padding: 0 1.5rem;
+}
+
+.faq-a.open {
+  max-height: 300px;
+  padding: 0 1.5rem 1.25rem;
+}
+
+/* ─── CONTACT ─── */
+.contact-wrap {
+  background: var(--off-black);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--pink-light);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-input {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem 1.25rem;
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus { border-color: var(--pink); }
+.form-input::placeholder { color: #444; }
+
+select.form-input { cursor: pointer; }
+textarea.form-input { resize: vertical; min-height: 120px; }
+
+.form-submit {
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.form-submit:hover { opacity: 0.88; }
+
+/* ─── PINK STRIPE ─── */
+.pink-stripe {
+  background: var(--pink);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.pink-stripe h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--white);
+  line-height: 1.15;
+}
+
+.pink-stripe p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-top: 0.5rem;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--off-black);
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-brand-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand-name span { color: var(--pink); }
+
+.footer-brand-desc {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-col-title {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--pink); }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #444;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-bottom span { color: var(--pink); }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  .nav-links { display: none; }
+  .airbnb-spotlight { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .includes-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#home" class="nav-brand">Falls <span>Girl</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#airbnb">Airbnb</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#faq">FAQs</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✨</div>
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✨</div>
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✨</div>
+
+  <div class="hero-eyebrow">Sioux Falls, SD · Est. 2025 · A BPB LLC Company</div>
+  <div class="hero-logo">
+    <span class="falls">Falls</span>
+    <span class="girl">Girl</span>
+  </div>
+  <div class="hero-cleaning-sub">Cleaning Co.</div>
+  <div class="hero-tagline">"We clean up after everyone else's good time."</div>
+  <div class="hero-location">Airbnb Turnovers · Deep Cleans · Move-In/Out · Office Cleaning</div>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    <a href="#services" class="btn-ghost">See Services</a>
+  </div>
+</section>
+
+<!-- INTRO STATS STRIP -->
+<div class="intro-strip">
+  <div>
+    <div class="intro-stat-num">5★</div>
+    <div class="intro-stat-label">Guest-Ready Standard</div>
+  </div>
+  <div>
+    <div class="intro-stat-num">STR</div>
+    <div class="intro-stat-label">Airbnb Specialists</div>
+  </div>
+  <div>
+    <div class="intro-stat-num">SD</div>
+    <div class="intro-stat-label">Locally Owned</div>
+  </div>
+  <div>
+    <div class="intro-stat-num">24h</div>
+    <div class="intro-stat-label">Quote Response</div>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section id="services" style="padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Our <em>Services</em></div>
+    <div class="section-sub">From quick Airbnb turnovers to full deep cleans — we handle it all with the same standard: spotless.</div>
+    <div class="divider"></div>
+
+    <div class="service-grid">
+
+      <a href="#airbnb" class="service-card">
+        <div class="service-card-top">🏡</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Airbnb Turnover</div>
+          <div class="service-card-desc">Our specialty. Fast, reliable checkout-to-checkin cleaning built around your booking schedule.</div>
+          <div class="service-card-price">Studio from ~$80 · 3BR from ~$150</div>
+          <div class="service-card-arrow">Learn More →</div>
+        </div>
+      </a>
+
+      <a href="#basic" class="service-card">
+        <div class="service-card-top">🧹</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Basic Cleaning</div>
+          <div class="service-card-desc">Essential upkeep — dusting, floors, bathrooms, kitchen surfaces, and trash. Consistently tidy.</div>
+          <div class="service-card-price">1BR from $90 · 6BR up to $320</div>
+          <div class="service-card-arrow">See Pricing →</div>
+        </div>
+      </a>
+
+      <a href="#deep" class="service-card">
+        <div class="service-card-top">✨</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Deep Cleaning</div>
+          <div class="service-card-desc">Full detail — baseboards, grout, inside appliances, trim, vents. The top-to-bottom reset.</div>
+          <div class="service-card-price">1BR from $150 · 6BR up to $480</div>
+          <div class="service-card-arrow">See Pricing →</div>
+        </div>
+      </a>
+
+      <a href="#moveinout" class="service-card">
+        <div class="service-card-top">📦</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Move-In / Move-Out</div>
+          <div class="service-card-desc">Leave the old place spotless or make the new one sparkle. Includes inside fridge, oven, and cabinets.</div>
+          <div class="service-card-price">Studio from $150 · 6BR up to $780</div>
+          <div class="service-card-arrow">See Pricing →</div>
+        </div>
+      </a>
+
+      <a href="#office" class="service-card">
+        <div class="service-card-top">🏢</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Office Cleaning</div>
+          <div class="service-card-desc">Nightly, weekly, or custom schedules for productive workplaces. Desks, restrooms, floors, and more.</div>
+          <div class="service-card-price">From $0.12/sq ft · Hourly options available</div>
+          <div class="service-card-arrow">See Pricing →</div>
+        </div>
+      </a>
+
+      <a href="#contact" class="service-card">
+        <div class="service-card-top">💬</div>
+        <div class="service-card-body">
+          <div class="service-card-title">Custom / Add-Ons</div>
+          <div class="service-card-desc">Inside oven, fridge, windows, carpet, supply restocking. Build your own clean.</div>
+          <div class="service-card-price">Priced by request</div>
+          <div class="service-card-arrow">Get a Quote →</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- AIRBNB SPOTLIGHT -->
+<div style="background:var(--off-black); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:5rem 2rem;" id="airbnb">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">Our Specialty</div>
+    <div class="section-title" style="margin-bottom:2rem;">Airbnb & <em>Short-Term Rental</em> Cleaning</div>
+    <div class="airbnb-spotlight">
+      <div>
+        <div class="airbnb-headline">Guest checks out.<br><em>We check in.</em></div>
+        <div class="airbnb-body">
+          Sioux Falls Airbnb hosts — we built Falls Girl Cleaning specifically for you. Same-day turnovers, before/after photos sent after every clean, and we actually show up when we say we will. No drama. No missed details.
+        </div>
+        <ul class="airbnb-checklist">
+          <li>Same-day & rapid turnovers available</li>
+          <li>Before/after photos sent after every job</li>
+          <li>We follow your house manual & checklist</li>
+          <li>Listed on Turno & Properly — easy booking</li>
+          <li>Consistent crew — same faces every time</li>
+          <li>Supplies included — nothing for you to manage</li>
+        </ul>
+        <div style="margin-top:1.5rem;">
+          <a href="#contact" class="btn-primary">Book Your First Clean (20% Off)</a>
+        </div>
+      </div>
+      <div class="airbnb-rates">
+        <div class="airbnb-rate-header">✦ Airbnb Turnover Rates</div>
+        <div class="airbnb-rate-row">
+          <span class="airbnb-rate-type">Studio / 1BR</span>
+          <span class="airbnb-rate-price">$80 – $120</span>
+        </div>
+        <div class="airbnb-rate-row">
+          <span class="airbnb-rate-type">2-Bedroom</span>
+          <span class="airbnb-rate-price">$110 – $150</span>
+        </div>
+        <div class="airbnb-rate-row">
+          <span class="airbnb-rate-type">3-Bedroom</span>
+          <span class="airbnb-rate-price">$140 – $190</span>
+        </div>
+        <div class="airbnb-rate-row">
+          <span class="airbnb-rate-type">4-Bedroom</span>
+          <span class="airbnb-rate-price">$170 – $230</span>
+        </div>
+        <div class="airbnb-rate-row">
+          <span class="airbnb-rate-type">5-Bedroom+</span>
+          <span class="airbnb-rate-price">Quote on request</span>
+        </div>
+        <div class="airbnb-rate-row" style="background:rgba(255,26,108,0.07);">
+          <span class="airbnb-rate-type" style="color:var(--pink-light);">🎉 First Clean</span>
+          <span class="airbnb-rate-price">20% OFF</span>
+        </div>
+        <div class="airbnb-rate-note">Rates vary by property condition & timing. Deep turnover cleans priced separately.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BASIC CLEANING -->
+<section id="basic" class="service-section">
+  <div class="service-section-inner">
+    <div class="service-icon-header">
+      <div class="service-icon">🧹</div>
+      <div>
+        <div class="section-label">Residential</div>
+        <div class="section-title" style="font-size:2rem;">Basic <em>Cleaning</em></div>
+      </div>
+    </div>
+    <div class="section-sub" style="margin-bottom:1.5rem;">Essential maintenance for a consistently tidy home — perfect between deep cleans or as regular upkeep.</div>
+    <div class="divider"></div>
+
+    <div class="includes-grid" style="margin-bottom:2rem;">
+      <div class="include-item">General dusting — surfaces, furniture, décor</div>
+      <div class="include-item">Vacuum carpets & rugs</div>
+      <div class="include-item">Sweep & mop all hard floors</div>
+      <div class="include-item">Bathrooms: toilets, sinks, mirrors, tubs/showers</div>
+      <div class="include-item">Kitchen counters & exterior appliances</div>
+      <div class="include-item">Surface tidy-up & trash removal</div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-size">1-Bedroom</div>
+        <div class="price-name">Small Home</div>
+        <div class="price-sqft">600–800 sq ft</div>
+        <div class="price-amount">$90 – $120</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">2-Bedroom</div>
+        <div class="price-name">Standard Home</div>
+        <div class="price-sqft">801–1,200 sq ft</div>
+        <div class="price-amount">$110 – $140</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">3-Bedroom</div>
+        <div class="price-name">Family Home</div>
+        <div class="price-sqft">1,201–2,500 sq ft</div>
+        <div class="price-amount">$130 – $170</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">4-Bedroom</div>
+        <div class="price-name">Large Home</div>
+        <div class="price-sqft">1,800–3,000 sq ft</div>
+        <div class="price-amount">$160 – $220</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">5-Bedroom</div>
+        <div class="price-name">XL Home</div>
+        <div class="price-sqft">2,500–4,000 sq ft</div>
+        <div class="price-amount">$200 – $260</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">6-Bedroom</div>
+        <div class="price-name">Estate</div>
+        <div class="price-sqft">2,700–6,000 sq ft</div>
+        <div class="price-amount">$240 – $320</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#contact" class="btn-primary">Request a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEEP CLEANING -->
+<section id="deep" style="padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="service-icon-header">
+      <div class="service-icon">✨</div>
+      <div>
+        <div class="section-label">Residential</div>
+        <div class="section-title" style="font-size:2rem;">Deep <em>Cleaning</em></div>
+      </div>
+    </div>
+    <div class="section-sub" style="margin-bottom:1.5rem;">The full reset. Every corner, every detail. Includes everything in Basic Cleaning plus the hard stuff everyone skips.</div>
+    <div class="divider"></div>
+
+    <div class="includes-grid" style="margin-bottom:2rem;">
+      <div class="include-item">Everything in Basic Cleaning</div>
+      <div class="include-item">Baseboards, doors, trim & switch plates</div>
+      <div class="include-item">Vents & ceiling fan blades</div>
+      <div class="include-item">Grout touch-ups in kitchen & bath</div>
+      <div class="include-item">Inside microwave & cabinet fronts</div>
+      <div class="include-item">Edges, corners & buildup removal</div>
+      <div class="include-item">Fixture detailing throughout</div>
+      <div class="include-item">All appliance exteriors polished</div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-size">1-Bedroom</div>
+        <div class="price-name">Small Home</div>
+        <div class="price-sqft">600–800 sq ft</div>
+        <div class="price-amount">$150 – $200</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">2-Bedroom</div>
+        <div class="price-name">Standard Home</div>
+        <div class="price-sqft">801–1,200 sq ft</div>
+        <div class="price-amount">$170 – $220</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">3-Bedroom</div>
+        <div class="price-name">Family Home</div>
+        <div class="price-sqft">1,201–2,500 sq ft</div>
+        <div class="price-amount">$200 – $270</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">4-Bedroom</div>
+        <div class="price-name">Large Home</div>
+        <div class="price-sqft">1,800–3,000 sq ft</div>
+        <div class="price-amount">$240 – $320</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">5-Bedroom</div>
+        <div class="price-name">XL Home</div>
+        <div class="price-sqft">2,500–4,000 sq ft</div>
+        <div class="price-amount">$280 – $380</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">6-Bedroom</div>
+        <div class="price-name">Estate</div>
+        <div class="price-sqft">2,700–6,000 sq ft</div>
+        <div class="price-amount">$350 – $480</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#contact" class="btn-primary">Request a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- MOVE IN / OUT -->
+<section id="moveinout" class="service-section">
+  <div class="service-section-inner">
+    <div class="service-icon-header">
+      <div class="service-icon">📦</div>
+      <div>
+        <div class="section-label">Residential</div>
+        <div class="section-title" style="font-size:2rem;">Move-In / <em>Move-Out</em></div>
+      </div>
+    </div>
+    <div class="section-sub" style="margin-bottom:1.5rem;">Make your new place sparkle or leave the old one spotless. Includes the full detail work tenants and owners need.</div>
+    <div class="divider"></div>
+
+    <div class="includes-grid" style="margin-bottom:2rem;">
+      <div class="include-item">Inside fridge & oven (on request)</div>
+      <div class="include-item">Cabinet fronts; interiors for empty units</div>
+      <div class="include-item">Baseboards, doors, trim & fixtures</div>
+      <div class="include-item">Blinds (surface wipe)</div>
+      <div class="include-item">Bathrooms & kitchen — full detail</div>
+      <div class="include-item">All floors throughout</div>
+      <div class="include-item">Final wipe-down, ready-to-show finish</div>
+      <div class="include-item">Condition-based pricing — honest & fair</div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-size">Studio / 1-Bed</div>
+        <div class="price-name">Apartment</div>
+        <div class="price-sqft">Up to ~800 sq ft</div>
+        <div class="price-amount">$150 – $260</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">2-Bedroom</div>
+        <div class="price-name">Standard</div>
+        <div class="price-sqft">~801–1,200 sq ft</div>
+        <div class="price-amount">$220 – $320</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">3-Bedroom</div>
+        <div class="price-name">Family Home</div>
+        <div class="price-sqft">~1,201–2,500 sq ft</div>
+        <div class="price-amount">$290 – $420</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">4-Bedroom</div>
+        <div class="price-name">Large Home</div>
+        <div class="price-sqft">~1,800–3,000 sq ft</div>
+        <div class="price-amount">$360 – $520</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">5-Bedroom</div>
+        <div class="price-name">XL Home</div>
+        <div class="price-sqft">~2,500–4,000 sq ft</div>
+        <div class="price-amount">$440 – $640</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">6-Bedroom</div>
+        <div class="price-name">Estate</div>
+        <div class="price-sqft">~2,700–6,000 sq ft</div>
+        <div class="price-amount">$520 – $780</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1rem;">
+      <p style="font-size:12px; color:#555; margin-bottom:1rem;">Prices vary with property condition, empty/occupied status, and add-ons.</p>
+      <a href="#contact" class="btn-primary">Request a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE CLEANING -->
+<section id="office" style="padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="service-icon-header">
+      <div class="service-icon">🏢</div>
+      <div>
+        <div class="section-label">Commercial</div>
+        <div class="section-title" style="font-size:2rem;">Office <em>Cleaning</em></div>
+      </div>
+    </div>
+    <div class="section-sub" style="margin-bottom:1.5rem;">Nightly, weekly, or custom schedules for productive workplaces. We handle the mess so your team can focus.</div>
+    <div class="divider"></div>
+
+    <div class="includes-grid" style="margin-bottom:2rem;">
+      <div class="include-item">Desks, conference rooms, kitchens & breakrooms</div>
+      <div class="include-item">Restroom sanitization & trash removal</div>
+      <div class="include-item">Floors: vacuum, sweep & mop</div>
+      <div class="include-item">High-touch disinfection & dusting</div>
+      <div class="include-item">Supply restocking on request</div>
+      <div class="include-item">Nightly, weekly, or custom schedule</div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-size">Small Office</div>
+        <div class="price-name">Up to 5,000 sq ft</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.15–$0.20</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">Medium Office</div>
+        <div class="price-name">5,000–10,000 sq ft</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.13–$0.18</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">Large Office</div>
+        <div class="price-name">10,000+ sq ft</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.12–$0.16</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">Retail</div>
+        <div class="price-name">Varies by store</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.18–$0.25</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">Restaurant</div>
+        <div class="price-name">Dining + Back of House</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.20–$0.30</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">Healthcare</div>
+        <div class="price-name">Clinics / Facilities</div>
+        <div class="price-sqft">Per square foot rate</div>
+        <div class="price-amount">$0.25–$0.35</div>
+        <div class="price-note">/ sq ft</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1rem;">
+      <p style="font-size:12px; color:#555; margin-bottom:1rem;">Hourly options available ($35–$75 per cleaner). Specialized tasks (carpets, waxing, windows) priced separately.</p>
+      <a href="#contact" class="btn-primary">Request a Walk-Through</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<div style="background:var(--off-black); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">Why Falls Girl</div>
+    <div class="section-title">What Makes Us <em>Different</em></div>
+    <div class="divider"></div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">📍</span>
+        <div class="why-title">Sioux Falls Local</div>
+        <div class="why-desc">We live here. We work here. We're not a franchise. Falls Girl is a real Sioux Falls crew — not a call center booking someone out of state.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">⏰</span>
+        <div class="why-title">We Actually Show Up</div>
+        <div class="why-desc">The #1 complaint about cleaning services? No-shows. We're obsessive about reliability. Your booking is a commitment we take seriously.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📸</span>
+        <div class="why-title">Before/After Photos</div>
+        <div class="why-desc">After every clean, we send you before and after photos. No guessing whether the job got done right. See it for yourself.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🏡</span>
+        <div class="why-title">Airbnb-Trained</div>
+        <div class="why-desc">We know what Airbnb guests look for. 5-star reviews come from details most cleaners miss. We don't miss them.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💬</span>
+        <div class="why-title">Responsive Communication</div>
+        <div class="why-desc">Text us, call us, DM us. We respond fast because we know your checkout window doesn't wait for anyone.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💰</span>
+        <div class="why-title">Transparent Pricing</div>
+        <div class="why-desc">No surprise fees. No upsell pressure. You see the rate upfront and that's what you pay. Simple as that.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS (placeholder) -->
+<section style="padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">What Hosts Say</div>
+    <div class="section-title">Real <em>Reviews</em></div>
+    <div class="divider"></div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"Finally a cleaning crew that shows up on time and actually gets into the corners. My guests keep leaving 5-star reviews on cleanliness."</div>
+        <div class="testi-author">Airbnb Host · <span>Sioux Falls, SD</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"The before and after photos are a game changer. I manage three properties remotely and Falls Girl makes it stress-free."</div>
+        <div class="testi-author">STR Owner · <span>Sioux Falls, SD</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"Same-day turnovers with zero drama. These girls run a tight operation. I've recommended them to every host I know."</div>
+        <div class="testi-author">Airbnb Superhost · <span>Sioux Falls, SD</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<div id="areas" style="background:var(--off-black); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">Where We Work</div>
+    <div class="section-title">Service <em>Areas</em></div>
+    <div class="section-sub" style="margin-bottom:2rem;">Based in Sioux Falls — serving the surrounding communities.</div>
+    <div class="divider"></div>
+
+    <div class="areas-grid">
+      <div class="area-pill">📍 Sioux Falls</div>
+      <div class="area-pill">Brandon</div>
+      <div class="area-pill">Harrisburg</div>
+      <div class="area-pill">Tea</div>
+      <div class="area-pill">Renner</div>
+      <div class="area-pill">Crooks</div>
+      <div class="area-pill">Baltic</div>
+      <div class="area-pill">Dell Rapids</div>
+      <div class="area-pill">Lennox</div>
+      <div class="area-pill">Canton</div>
+      <div class="area-pill">Worthington, MN</div>
+      <div class="area-pill">Luverne, MN</div>
+    </div>
+
+    <p style="font-size:12px; color:#555; margin-top:1.5rem; text-align:center;">Don't see your area? Contact us — we may still be able to help.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" style="padding:5rem 2rem;">
+  <div style="max-width:700px; margin:0 auto;">
+    <div class="section-label">Common Questions</div>
+    <div class="section-title">FAQs</div>
+    <div class="divider"></div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Do you bring your own supplies? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">Yes — we bring all cleaning supplies and equipment. You don't need to provide anything. If you have specific product preferences for your property, let us know and we'll accommodate.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          How do I book a turnover clean for my Airbnb? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">Text or call us directly, fill out the quote form below, or book through Turno or Properly. Once we have your property details and checkout/checkin windows, we'll get you scheduled and confirm every time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Can you do same-day turnovers? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">Yes — same-day turnovers are our specialty. Subject to scheduling availability. We recommend setting up a recurring schedule so your turnovers are always covered without last-minute stress.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          What if I'm not happy with the clean? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">We'll come back and fix it. Period. We send before/after photos after every job, but if something was missed, contact us within 24 hours and we'll return at no charge.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          How is payment handled? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">We accept Venmo Business, Zelle, or check payable to Falls Girl Cleaning. Payment is due upon completion unless you're on a recurring schedule, in which case we invoice weekly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Are you insured? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">Falls Girl Cleaning operates under BPB LLC, a registered South Dakota company. We are actively building toward full general liability insurance coverage — ask us about current status when you reach out.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Do you clean properties outside of Sioux Falls? <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">We serve Sioux Falls and surrounding communities including Brandon, Harrisburg, Tea, and more. For locations farther out, contact us and we'll let you know if we can accommodate.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PINK STRIPE -->
+<div class="pink-stripe">
+  <h2>Born in the Falls.<br>Built to shine.</h2>
+  <p>"We clean up after everyone else's good time."</p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="contact-wrap">
+  <div class="contact-inner">
+    <div class="section-label" style="text-align:center;">Get a Quote</div>
+    <div class="section-title" style="text-align:center; margin-bottom:0.5rem;">Let's Talk <em>Clean</em></div>
+    <div class="contact-tagline">"Guest checks out. We check in."</div>
+
+    <form class="contact-form" name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="quote-request" />
+      <p style="display:none;"><input name="bot-field" /></p>
+      <div class="form-row">
+        <input type="text" class="form-input" placeholder="Your Name" required />
+        <input type="tel" class="form-input" placeholder="Phone Number" required />
+      </div>
+      <input type="email" class="form-input" placeholder="Email Address" />
+      <select class="form-input" required>
+        <option value="" disabled selected>What service do you need?</option>
+        <option>Airbnb / STR Turnover</option>
+        <option>Basic Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Move-In / Move-Out</option>
+        <option>Office / Commercial</option>
+        <option>Not sure — just need a quote</option>
+      </select>
+      <div class="form-row">
+        <input type="text" class="form-input" placeholder="Address or City" />
+        <input type="text" class="form-input" placeholder="Property size (beds/sqft)" />
+      </div>
+      <textarea class="form-input" placeholder="Any details? (special requests, access notes, timing needs...)"></textarea>
+      <button type="submit" class="form-submit">Send My Quote Request ✦</button>
+
+    <div style="margin-top:2rem; font-size:13px; color:var(--gray); text-align:center; line-height:2;">
+      Or reach us directly:<br>
+      <span style="color:var(--pink-light);">(605) 501-8464</span> · Text or Call<br>
+      <a href="mailto:thefallsgirl@yahoo.com" style="color:var(--pink-light); text-decoration:none;">thefallsgirl@yahoo.com</a><br>
+      <span style="color:var(--pink-light);">@FallsGirlCleaning</span> on Instagram & Facebook
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Falls <span>Girl</span> Cleaning</div>
+      <div class="footer-brand-desc">Sioux Falls' boldest cleaning crew. Airbnb turnovers, deep cleans, move-in/out, and office cleaning. We clean up after everyone else's good time.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#airbnb">Airbnb Turnover</a></li>
+        <li><a href="#basic">Basic Cleaning</a></li>
+        <li><a href="#deep">Deep Cleaning</a></li>
+        <li><a href="#moveinout">Move-In / Out</a></li>
+        <li><a href="#office">Office Cleaning</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+        <li><a href="mailto:thefallsgirl@yahoo.com">thefallsgirl@yahoo.com</a></li>
+        <li><a href="#">@FallsGirlCleaning</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Falls Girl Cleaning Co. · A <span>BPB LLC</span> Company · Sioux Falls, SD</span>
+    <span style="color:#333;">"We clean up after everyone else's good time."</span>
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  // open clicked if it was closed
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = '✓ Sent! We\'ll be in touch within 24 hours.';
+  btn.style.background = '#1a6c3f';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
